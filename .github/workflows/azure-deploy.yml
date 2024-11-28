@@ -39,7 +39,7 @@ jobs:
       - name: Deploy
         uses: azure/arm-deploy@v2
         with:
-          scope: subscription
+          scope: resourcegroup
           resourceGroupName: ${{ vars.RESOURCE_GROUP_NAME}}
           region: ${{ vars.RESOURCE_GROUP_LOCATION}}
           template: ./infrastructure/main.bicep
